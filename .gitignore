@@ -1,0 +1,5 @@
+plugin
+.DS_Store
+.iterm2_shell_integration.zsh
+iterm2/
+karabiner/
