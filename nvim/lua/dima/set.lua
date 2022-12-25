@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 vim.opt.nu = true;
 vim.opt.relativenumber = true;
 
@@ -16,4 +18,3 @@ vim.opt.undofile = true
 
 vim.opt.termguicolors = true
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
