@@ -17,6 +17,6 @@
 		viAlias = true;
 		vimAlias = true;
 
-        # if you set configure attribute than ~/.config/nvim/init.lua will not be sourced
+        # if you set configure attribute ~/.config/nvim/init.lua will not be sourced
 	});
 }
