@@ -59,7 +59,7 @@
       single-space-files = pkgs.fetchFromGitHub {
         owner = "inaimathi";
         repo = "gtypist-single-space";
-        rev = "master";
+        rev = "2bdf2f417c81f3243822f1a8fc38c3143a98cb0b";
         sha256 = "sha256-vkRKGi/U18QLoSlM96IwKQZNkc+fHrynGi8nhrO+LhU";
       };
     in
