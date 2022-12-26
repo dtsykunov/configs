@@ -18,3 +18,4 @@ vim.opt.undofile = true
 
 vim.opt.termguicolors = true
 
+vim.cmd('colorscheme abscs')
