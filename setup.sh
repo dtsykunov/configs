@@ -26,11 +26,8 @@ fi
 EOF
 # new lines to /etc/bashrc and /etc/bash.bashrc were added
 
-git clone git@github.com:dtsykunov/configs.git "$HOME/.config"
-
-pushd "$HOME/.config"
 nix profile install \
-                .#fzf \
-                .#neovim \
-                .#ripgrep
+                "$HOME/.config#fzf" \
+                "$HOME/.config#neovim" \
+                "$HOME/.config#ripgrep"
 
