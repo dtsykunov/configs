@@ -1,8 +1,6 @@
 { pkgs ? import <nixpkgs> { } }:
 {
   inherit (pkgs)
-    exa
-    fd
     fzf
     git
     luaformatter
@@ -33,6 +31,7 @@
       configure = {
         customRC = ''
           colorscheme abscs
+          set mouse=
           if filereadable(expand("~/.config/nvim/init.lua"))
               lua require('dima')
           endif
@@ -46,8 +45,9 @@
                 help
               ]
             ))
-            telescope-nvim
             abscs
+            fugitive
+            telescope-nvim
           ];
         };
       };
