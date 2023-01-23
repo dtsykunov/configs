@@ -1,9 +1,9 @@
-export EDITOR=vim
+export EDITOR=nvim
 
 set -o vi
 
 if [[ -d "$HOME/.nix-profile" ]]; then
-    for completion in "$(find "$HOME/.nix-profile/share/bash-completion/completions/" -type f)"; do
+    for completion in $(find -L "$HOME/.nix-profile/share/bash-completion/completions/" -type f); do
         source "$completion"
     done
 
