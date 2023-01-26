@@ -3,9 +3,10 @@
   inherit (pkgs)
     fzf
     git
-    luaformatter
     nixpkgs-fmt
+    pyright
     ripgrep
+    rnix-lsp
     tree
     zsh# i had to do '$ command -v zsh | sudo tee -a /etc/shells'
     zsh-fast-syntax-highlighting
@@ -21,6 +22,15 @@
           sha256 = "sha256-tENdnmP0NRoLApJZlRzkgjG6dva03sptJaaKOdyc/wo";
         };
       };
+      lsp-zero = pkgs.vimUtils.buildVimPluginFrom2Nix {
+        name = "lsp-zero";
+        src = pkgs.fetchFromGitHub {
+          owner = "VonHeikemen";
+          repo = "lsp-zero.nvim";
+          rev = "40bbc05";
+          sha256 = "sha256-ik2YijE254M5R6lSI/YfhBtN0iN5fhKjl5AiOn5vVCI=";
+        };
+      };
     in
     {
       viAlias = true;
@@ -30,8 +40,9 @@
       # however, lua modules inside ~/.config/nvim are found
       configure = {
         customRC = ''
-          colorscheme abscs
           set mouse=
+          colorscheme abscs
+          set signcolumn=yes
           if filereadable(expand("~/.config/nvim/init.lua"))
               lua require('dima')
           endif
@@ -46,7 +57,12 @@
               ]
             ))
             abscs
+            cmp-nvim-lsp
             fugitive
+            lsp-zero
+            luasnip
+            nvim-cmp
+            nvim-lspconfig
             telescope-nvim
           ];
         };

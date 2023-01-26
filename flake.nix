@@ -45,6 +45,7 @@
             customRC = ''
               set mouse=
               colorscheme abscs
+              set signcolumn=yes
               if filereadable(expand("~/.config/nvim/init.lua"))
                   lua require('dima')
               endif
