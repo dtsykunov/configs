@@ -11,4 +11,8 @@ if [[ -d "$HOME/.nix-profile" ]]; then
         source "$HOME/.nix-profile/share/fzf/key-bindings.bash"
         source "$HOME/.nix-profile/share/fzf/completion.bash"
     fi
+
+    export EDITOR=nvim
+    export PAGER=bat
 fi
+
