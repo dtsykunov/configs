@@ -10,6 +10,7 @@
     tree
     zsh# i had to do '$ command -v zsh | sudo tee -a /etc/shells'
     zsh-fast-syntax-highlighting
+    tmux
     ;
   neovim = pkgs.neovim.override (
     let
@@ -58,6 +59,7 @@
             ))
             abscs
             cmp-nvim-lsp
+            commentary
             fugitive
             lsp-zero
             luasnip
