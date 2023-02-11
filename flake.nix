@@ -58,6 +58,7 @@
                     javascript
                     nix
                     python
+                    html
                   ]
                 ))
                 abscs
