@@ -54,13 +54,15 @@
               start = [
                 (nvim-treesitter.withPlugins (
                   plugins: with plugins; [
+                    help
+                    javascript
                     nix
                     python
-                    help
                   ]
                 ))
                 abscs
                 cmp-nvim-lsp
+                commentary
                 fugitive
                 lsp-zero
                 luasnip
