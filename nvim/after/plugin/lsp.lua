@@ -3,7 +3,7 @@
 local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
-lsp.setup_servers({'pyright', 'rnix'})
+lsp.setup_servers({'pyright', 'rnix', 'html'})
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
 

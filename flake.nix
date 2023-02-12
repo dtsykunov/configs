@@ -59,6 +59,7 @@
                     nix
                     python
                     html
+                    tree-sitter-hcl
                   ]
                 ))
                 abscs
